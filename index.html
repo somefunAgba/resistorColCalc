@@ -1,198 +1,199 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/drop.css">
-        <link rel="stylesheet" href="css/shape.css">
-        <!--Import Google Icon Font-->
-<!--        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        &lt;!&ndash;Import materialize.css&ndash;&gt;-->
-        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-        <link rel="stylesheet" href="css/animate.min.css">
-        <link rel="stylesheet" href="css/hint.min.css">
-        <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/font-awesome-animation/font-awesome-animation.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/drop.css">
+    <link rel="stylesheet" href="css/shape.css">
+    <!--Import Google Icon Font-->
+    <!--        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+            &lt;!&ndash;Import materialize.css&ndash;&gt;-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/hint.min.css">
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/font-awesome-animation/font-awesome-animation.min.css">
 
-    </head>
-    <body onload="bodyLoad()">
-        <!-- application content here -->
-      <!--  <div class="dropdown">
-            <button class="dropbtn">
-            </button>
+</head>
+<body onload="bodyLoad()">
+<!-- application content here -->
+<!--  <div class="dropdown">
+      <button class="dropbtn">
+      </button>
 
-        </div>-->
+  </div>-->
 
-        <header>
-        <div id="main" class="container">
-            <div class="section">
+<header>
+    <div id="main" class="container">
+        <div class="section">
             <div class="chip">
                 <img src="img/somefun.jpg" alt="Contact Person">
                 Oluwasegun Somefun
-            </div></div>
-
-            <div class="divider"></div>
+            </div>
         </div>
-        </header>
-        <!--Hello Sir, <span class="hint&#45;&#45;bottom" aria-label="Thank you!">hover over me.</span>-->
-        <main class="panel-body">
 
-            <div class="container">
-                <div class="flow-text row">
-                    <div class="col s6 m6 l6">
-                        <form action="#">
-                        <p>
-                            <input name="bands" type="radio" id="bands_4" />
-                            <label for="bands_4">4-Band</label>
-                        </p>
-                        <p>
-                            <input name="bands" type="radio" id="bands_5" />
-                            <label for="bands_5">5-Band</label>
-                        </p>
-                        <p>
-                            <input name="bands" type="radio" id="bands_6" checked="checked"/>
-                            <label for="bands_6">6-Band</label>
-                        </p>
-                        </form>
+        <div class="divider"></div>
+    </div>
+</header>
+<!--Hello Sir, <span class="hint&#45;&#45;bottom" aria-label="Thank you!">hover over me.</span>-->
+<main class="panel-body">
+
+    <div class="container">
+        <div class="flow-text row">
+            <div class="col s6 m6 l6">
+                <form action="#">
+                    <p>
+                        <input name="bands" type="radio" id="bands_4"/>
+                        <label for="bands_4">4-Band</label>
+                    </p>
+                    <p>
+                        <input name="bands" type="radio" id="bands_5"/>
+                        <label for="bands_5">5-Band</label>
+                    </p>
+                    <p>
+                        <input name="bands" type="radio" id="bands_6" checked="checked"/>
+                        <label for="bands_6">6-Band</label>
+                    </p>
+                </form>
+            </div>
+            <div class="col s6 m6 l6">
+                <div class="switch">
+                    <p class="sw4">
+                        <label>Off
+                            <input disabled type="checkbox" id="bands_4switch"/>
+                            <span class="lever"></span>On</label>
+                    </p>
+                    <p class="sw5">
+                        <label>Off
+                            <input disabled type="checkbox" id="bands_5switch"/>
+                            <span class="lever"></span>On</label>
+                    </p>
+                    <p class="sw6">
+                        <label>Off
+                            <input disabled type="checkbox" id="bands_6switch" checked="checked"/>
+                            <span class="lever"></span>On</label>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="row hint--top" aria-label="colour-coded resistor">
+            <div class="col s12">
+                <div class="left-wire"></div>
+                <div class="right-wire clearfix"></div>
+                <div class="res_rect" aria-label="colour-coded resistor">
+                    <div class="dropdown">
+                        <div id="d1" class="dropbtn d_rect" onclick="toggleDrop1()"></div>
+                        <div class="drop-content" id="band1">
+                            <a href="#" data-value="0" style="background-color: black !important;">black</a>
+                            <a href="#" data-value="1" style="background-color: brown !important;">brown</a>
+                            <a href="#" data-value="2" style="background-color: red !important;">red</a>
+                            <a href="#" data-value="3" style="background-color: orange !important;">orange</a>
+                            <a href="#" data-value="4" style="background-color: yellow !important;">yellow</a>
+                            <a href="#" data-value="5" style="background-color: green !important;">green</a>
+                            <a href="#" data-value="6" style="background-color: blue !important;">blue</a>
+                            <a href="#" data-value="7" style="background-color: violet !important;">violet</a>
+                            <a href="#" data-value="8" style="background-color: grey !important;">grey</a>
+                            <a href="#" data-value="9" style="background-color: white !important;">white</a>
+                        </div>
                     </div>
-                    <div class="col s6 m6 l6">
-                        <div class="switch">
-                            <p class="sw4">
-                                <label>Off
-                                <input disabled type="checkbox" id="bands_4switch" />
-                                <span class="lever"></span>On</label>
-                            </p>
-                            <p class="sw5">
-                                <label>Off
-                                    <input disabled type="checkbox" id="bands_5switch" />
-                                    <span class="lever"></span>On</label>
-                            </p>
-                            <p class="sw6">
-                                <label>Off
-                                    <input disabled type="checkbox" id="bands_6switch" checked="checked"/>
-                                    <span class="lever"></span>On</label>
-                            </p>
+
+                    <div class="dropdown">
+                        <div id="d2" class="dropbtn d_rect_in" onclick="toggleDrop2()"></div>
+                        <div class="drop-content" id="band2">
+                            <a href="#" data-value="0" style="background-color: black !important;">black</a>
+                            <a href="#" data-value="1" style="background-color: brown !important;">brown</a>
+                            <a href="#" data-value="2" style="background-color: red !important;">red</a>
+                            <a href="#" data-value="3" style="background-color: orange !important;">orange</a>
+                            <a href="#" data-value="4" style="background-color: yellow !important;">yellow</a>
+                            <a href="#" data-value="5" style="background-color: green !important;">green</a>
+                            <a href="#" data-value="6" style="background-color: blue !important;">blue</a>
+                            <a href="#" data-value="7" style="background-color: violet !important;">violet</a>
+                            <a href="#" data-value="8" style="background-color: grey !important;">grey</a>
+                            <a href="#" data-value="9" style="background-color: white !important;">white</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <div id="d3" class="dropbtn d_rect_in" onclick="toggleDrop3()"></div>
+                        <div class="drop-content" id="band3">
+                            <a href="#" data-value="0" style="background-color: black !important;">black</a>
+                            <a href="#" data-value="1" style="background-color: brown !important;">brown</a>
+                            <a href="#" data-value="2" style="background-color: red !important;">red</a>
+                            <a href="#" data-value="3" style="background-color: orange !important;">orange</a>
+                            <a href="#" data-value="4" style="background-color: yellow !important;">yellow</a>
+                            <a href="#" data-value="5" style="background-color: green !important;">green</a>
+                            <a href="#" data-value="6" style="background-color: blue !important;">blue</a>
+                            <a href="#" data-value="7" style="background-color: violet !important;">violet</a>
+                            <a href="#" data-value="8" style="background-color: grey !important;">grey</a>
+                            <a href="#" data-value="9" style="background-color: white !important;">white</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <div id="d4" class="dropbtn d_rect_in" onclick="toggleDrop4()"></div>
+                        <div class="drop-content" id="band4">
+                            <a href="#" data-value="0" style="background-color: black !important;">black</a>
+                            <a href="#" data-value="1" style="background-color: brown !important;">brown</a>
+                            <a href="#" data-value="2" style="background-color: red !important;">red</a>
+                            <a href="#" data-value="3" style="background-color: orange !important;">orange</a>
+                            <a href="#" data-value="4" style="background-color: yellow !important;">yellow</a>
+                            <a href="#" data-value="5" style="background-color: green !important;">green</a>
+                            <a href="#" data-value="6" style="background-color: blue !important;">blue</a>
+                            <a href="#" data-value="7" style="background-color: violet !important;">violet</a>
+                            <a href="#" data-value="8" style="background-color: grey !important;">grey</a>
+                            <a href="#" data-value="9" style="background-color: white !important;">white</a>
+                            <a href="#" data-value="0.1" style="background-color: gold !important;">gold</a>
+                            <a href="#" data-value="0.01" style="background-color: silver !important;">silver</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <div id="d5" class="dropbtn d_rect_in" onclick="toggleDrop5()"></div>
+                        <div class="drop-content" id="band5">
+                            <a href="#" data-value="1" style="background-color: brown !important;">brown</a>
+                            <a href="#" data-value="2" style="background-color: red !important;">red</a>
+                            <a href="#" data-value="3" style="background-color: orange !important;">orange</a>
+                            <a href="#" data-value="4" style="background-color: yellow !important;">yellow</a>
+                            <a href="#" data-value="0.5" style="background-color: green !important;">green</a>
+                            <a href="#" data-value="0.25" style="background-color: blue !important;">blue</a>
+                            <a href="#" data-value="0.1" style="background-color: violet !important;">violet</a>
+                            <a href="#" data-value="0.05" style="background-color: grey !important;">grey</a>
+                            <a href="#" data-value="5" style="background-color: gold !important;">gold</a>
+                            <a href="#" data-value="10" style="background-color: silver !important;">silver</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <div id="d6" class="dropbtn d_rect" onclick="toggleDrop6()"></div>
+                        <div class="drop-content" id="band6">
+                            <a href="#" data-value="250" style="background-color: black !important;">black</a>
+                            <a href="#" data-value="100" style="background-color: brown !important;">brown</a>
+                            <a href="#" data-value="50" style="background-color: red !important;">red</a>
+                            <a href="#" data-value="15" style="background-color: orange !important;">orange</a>
+                            <a href="#" data-value="25" style="background-color: yellow !important;">yellow</a>
+                            <a href="#" data-value="20" style="background-color: green !important;">green</a>
+                            <a href="#" data-value="10" style="background-color: blue !important;">blue</a>
+                            <a href="#" data-value="5" style="background-color: violet !important;">violet</a>
+                            <a href="#" data-value="1" style="background-color: grey !important;">grey</a>
                         </div>
                     </div>
                 </div>
-                <div class="divider"></div>
-                <div class="row hint--top" aria-label="colour-coded resistor">
-                    <div class="col s12">
-                        <div class="left-wire"></div>
-                        <div class="right-wire clearfix"></div>
-                        <div class="res_rect" aria-label="colour-coded resistor">
-                            <div class="dropdown">
-                                <div id="d1" class="dropbtn d_rect" onclick="toggleDrop1()"></div>
-                                <div class="drop-content" id="band1">
-                                    <a href="#" data-value="0" style="background-color: black !important;">black</a>
-                                    <a href="#" data-value="1" style="background-color: brown !important;">brown</a>
-                                    <a href="#" data-value="2" style="background-color: red !important;">red</a>
-                                    <a href="#" data-value="3" style="background-color: orange !important;" >orange</a>
-                                    <a href="#" data-value="4" style="background-color: yellow !important;">yellow</a>
-                                    <a href="#" data-value="5" style="background-color: green !important;">green</a>
-                                    <a href="#" data-value="6" style="background-color: blue !important;">blue</a>
-                                    <a href="#" data-value="7" style="background-color: violet !important;">violet</a>
-                                    <a href="#" data-value="8" style="background-color: grey !important;">grey</a>
-                                    <a href="#" data-value="9" style="background-color: white !important;">white</a>
-                                </div>
-                            </div>
+            </div>
+        </div>
 
-                            <div class="dropdown">
-                                <div id="d2" class="dropbtn d_rect_in" onclick="toggleDrop2()"></div>
-                                <div class="drop-content" id="band2">
-                                    <a href="#" data-value="0" style="background-color: black !important;">black</a>
-                                    <a href="#" data-value="1" style="background-color: brown !important;">brown</a>
-                                    <a href="#" data-value="2" style="background-color: red !important;">red</a>
-                                    <a href="#" data-value="3" style="background-color: orange !important;" >orange</a>
-                                    <a href="#" data-value="4" style="background-color: yellow !important;">yellow</a>
-                                    <a href="#" data-value="5" style="background-color: green !important;">green</a>
-                                    <a href="#" data-value="6" style="background-color: blue !important;">blue</a>
-                                    <a href="#" data-value="7" style="background-color: violet !important;">violet</a>
-                                    <a href="#" data-value="8" style="background-color: grey !important;">grey</a>
-                                    <a href="#" data-value="9" style="background-color: white !important;">white</a>
-                                </div>
-                            </div>
+        <div class="row clearfix" id="result">
+            <div class="divider"></div>
 
-                            <div class="dropdown">
-                                <div id="d3" class="dropbtn d_rect_in" onclick="toggleDrop3()"></div>
-                                <div class="drop-content" id="band3">
-                                    <a href="#" data-value="0" style="background-color: black !important;">black</a>
-                                    <a href="#" data-value="1" style="background-color: brown !important;">brown</a>
-                                    <a href="#" data-value="2" style="background-color: red !important;">red</a>
-                                    <a href="#" data-value="3" style="background-color: orange !important;" >orange</a>
-                                    <a href="#" data-value="4" style="background-color: yellow !important;">yellow</a>
-                                    <a href="#" data-value="5" style="background-color: green !important;">green</a>
-                                    <a href="#" data-value="6" style="background-color: blue !important;">blue</a>
-                                    <a href="#" data-value="7" style="background-color: violet !important;">violet</a>
-                                    <a href="#" data-value="8" style="background-color: grey !important;">grey</a>
-                                    <a href="#" data-value="9" style="background-color: white !important;">white</a>
-                                </div>
-                            </div>
+            <div class="col s12 m12 l12 x12">
+                <h4 class="m_dashboard">METRICS</h4></div>
 
-                            <div class="dropdown">
-                                <div id="d4" class="dropbtn d_rect_in" onclick="toggleDrop4()"></div>
-                                <div class="drop-content" id="band4">
-                                    <a href="#" data-value="0" style="background-color: black !important;">black</a>
-                                    <a href="#" data-value="1" style="background-color: brown !important;">brown</a>
-                                    <a href="#" data-value="2" style="background-color: red !important;">red</a>
-                                    <a href="#" data-value="3" style="background-color: orange !important;" >orange</a>
-                                    <a href="#" data-value="4" style="background-color: yellow !important;">yellow</a>
-                                    <a href="#" data-value="5" style="background-color: green !important;">green</a>
-                                    <a href="#" data-value="6" style="background-color: blue !important;">blue</a>
-                                    <a href="#" data-value="7" style="background-color: violet !important;">violet</a>
-                                    <a href="#" data-value="8" style="background-color: grey !important;">grey</a>
-                                    <a href="#" data-value="9" style="background-color: white !important;">white</a>
-                                    <a href="#" data-value="0.1" style="background-color: gold !important;">gold</a>
-                                    <a href="#" data-value="0.01" style="background-color: silver !important;">silver</a>
-                                </div>
-                            </div>
-
-                            <div class="dropdown">
-                                <div id="d5" class="dropbtn d_rect_in" onclick="toggleDrop5()"></div>
-                                <div class="drop-content" id="band5">
-                                    <a href="#" data-value="1" style="background-color: brown !important;">brown</a>
-                                    <a href="#" data-value="2" style="background-color: red !important;">red</a>
-                                    <a href="#" data-value="3" style="background-color: orange !important;" >orange</a>
-                                    <a href="#" data-value="4" style="background-color: yellow !important;">yellow</a>
-                                    <a href="#" data-value="0.5" style="background-color: green !important;">green</a>
-                                    <a href="#" data-value="0.25" style="background-color: blue !important;">blue</a>
-                                    <a href="#" data-value="0.1" style="background-color: violet !important;">violet</a>
-                                    <a href="#" data-value="0.05" style="background-color: grey !important;">grey</a>
-                                    <a href="#" data-value="5" style="background-color: gold !important;">gold</a>
-                                    <a href="#" data-value="10" style="background-color: silver !important;">silver</a>
-                                </div>
-                            </div>
-
-                            <div class="dropdown">
-                                <div id="d6" class="dropbtn d_rect" onclick="toggleDrop6()"></div>
-                                <div class="drop-content" id="band6">
-                                    <a href="#" data-value="250" style="background-color: black !important;">black</a>
-                                    <a href="#" data-value="100" style="background-color: brown !important;">brown</a>
-                                    <a href="#" data-value="50" style="background-color: red !important;">red</a>
-                                    <a href="#" data-value="15" style="background-color: orange !important;" >orange</a>
-                                    <a href="#" data-value="25" style="background-color: yellow !important;">yellow</a>
-                                    <a href="#" data-value="20" style="background-color: green !important;">green</a>
-                                    <a href="#" data-value="10" style="background-color: blue !important;">blue</a>
-                                    <a href="#" data-value="5" style="background-color: violet !important;">violet</a>
-                                    <a href="#" data-value="1" style="background-color: grey !important;">grey</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row clearfix" id="result">
-                        <div class="divider"></div>
-
-                            <div class="col s12 m12 l12 x12">
-                                <h4 class="m_dashboard">METRICS</h4></div>
-
-                            <div class="col s12 m6 l3">
+            <div class="col s12 m6 l3">
                                 <span id="res_val">
                                 <span class="fa-stack fa-fw faa-pulse animated dpanel1" aria-hidden="true">
                                     <i class="fa fa-square-o fa-stack-2x"></i>
@@ -201,9 +202,9 @@
                                 <span class="sr-only">RESISTANCE</span>
                                     <span class="res_val"></span><span class="res_unit"></span>
                                 </span>
-                            </div>
+            </div>
 
-                            <div class="col s12 m6 l3">
+            <div class="col s12 m6 l3">
                                 <span id="tolerance_val">
                                 <span class="fa-stack fa-fw faa-pulse animated  dpanel2" aria-hidden="true">
                                     <i class="fa fa-square-o fa-stack-2x"></i>
@@ -212,9 +213,9 @@
                                 <span class="sr-only">TOLERANCE</span>
                                     <span class="tol_val"></span><span class="tol_unit"></span>
                                 </span>
-                            </div>
+            </div>
 
-                            <div class="col s12 m6 l3">
+            <div class="col s12 m6 l3">
                                 <span id="range_val">
                                 <span class="fa-stack fa-fw faa-tada animated dpanel3" aria-hidden="true">
                                     <i class="fa fa-square-o fa-stack-2x"></i>
@@ -224,7 +225,7 @@
                                     <span class="range_val"></span>
                             </span></div>
 
-                            <div class="col s12 m6 l3">
+            <div class="col s12 m6 l3">
                                 <span id="temp_val">
                                 <span class="fa-stack fa-fw faa-flash animated dpanel4" aria-hidden="true">
                                     <i class="fa fa-square-o fa-stack-2x"></i>
@@ -233,49 +234,51 @@
                                 <span class="sr-only">TEMPERATURE CO-EFFICIENT</span>
                                     <span class="temp_val"></span><span class="temp_unit"></span>
                             </span></div>
-                </div>
+        </div>
+    </div>
+
+
+</main>
+
+<footer class="page-footer grey">
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col l6 s12">
+                <h5 class="white-text">Colour-Coded Resistor Calculator</h5>
+                <p class="cyan-text text-lighten-4">Uses some experimental CSS Specs.<br/>
+                    Works better on <i class="fa fa-chrome" aria-label="Chrome" style="color: #eaea14;"></i> and
+                    <i class="fa fa-firefox" aria-label="Firefox" style="color:red;"></i></p>
             </div>
 
-
-        </main>
-
-        <footer class="page-footer grey">
-
-            <div class="container">
-                <div class="row">
-
-                    <div class="col l6 s12">
-                        <h5 class="white-text">Colour-Coded Resistor Calculator</h5>
-                        <p class="cyan-text text-lighten-4">Uses some experimental CSS Specs.<br/>
-                            Works better on <i class="fa fa-chrome" aria-label="Chrome" style="color: #eaea14;"></i> and
-                            <i class="fa fa-firefox" aria-label="Firefox" style="color:red;"></i></p>
-                    </div>
-
-                    <div class="col l3 offset-l3 s12" style="text-align: right; text-overflow: clip;">
-                        <h5 class="white-text">Connect</h5>
-                        <ul>
-                            <li><a class="cyan-text text-lighten-3" href="https://facebook.com/prof.samolu">Facebook</a></li>
-                            <li><a class="cyan-text text-lighten-3" href="https://linkedin.com/oluwasegunsomefun">LinkedIn</a></li>
-                            <li><a class="cyan-text text-lighten-3" href="mailto:oluwasegun.somefun@yaho.co.uk">Email</a></li>
-                        </ul>
-                    </div>
-
-                </div>
+            <div class="col l3 offset-l3 s12" style="text-align: right; text-overflow: clip;">
+                <h5 class="white-text">Connect</h5>
+                <ul>
+                    <li><a class="cyan-text text-lighten-3" href="https://facebook.com/prof.samolu">Facebook</a></li>
+                    <li><a class="cyan-text text-lighten-3" href="https://linkedin.com/oluwasegunsomefun">LinkedIn</a>
+                    </li>
+                    <li><a class="cyan-text text-lighten-3" href="mailto:oluwasegun.somefun@yaho.co.uk">Email</a></li>
+                </ul>
             </div>
 
-            <div class="footer-copyright">
-                <div class="container">
-                    © 2017  SomefunAgba
-                    <a class="cyan-text text-lighten-4 right" href="https://github.com/somefunagba/resistorColCalc">Fork on Github</a>
-                </div>
-            </div>
+        </div>
+    </div>
 
-        </footer>
+    <div class="footer-copyright">
+        <div class="container">
+            © 2017 SomefunAgba
+            <a class="cyan-text text-lighten-4 right" href="https://github.com/somefunagba/resistorColCalc">Fork on
+                Github</a>
+        </div>
+    </div>
 
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
-        <script type="text/javascript" src="js/materialize.min.js"></script>
-        <script src="js/main.js"></script>
-        <script src="js/resColourCode.js"></script>
+</footer>
 
-    </body>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/resColourCode.js"></script>
+
+</body>
 </html>

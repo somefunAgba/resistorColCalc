@@ -1,6 +1,7 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
+
 *::before, *::after {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -23,15 +24,16 @@
     clear: both;
 }
 
-.divider{
+.divider {
     margin: 5px 0 5px 0;
 }
-.divider::after, .divider::before{
+
+.divider::after, .divider::before {
     clear: both;
 }
 
 select {
-    overflow-y:auto !important;
+    overflow-y: auto !important;
     text-align: center !important;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -39,10 +41,16 @@ select {
     box-sizing: border-box;
 }
 
-select::-ms-expand {display: none; }
+select::-ms-expand {
+    display: none;
+}
 
-@-moz-document url-prefix(){
-    select { width: 100%; background-position: right 30px center !important; border: none !important;}
+@-moz-document url-prefix() {
+    select {
+        width: 100%;
+        background-position: right 30px center !important;
+        border: none !important;
+    }
 }
 
 select option {
@@ -52,32 +60,32 @@ select option {
 }
 
 /* Resistor Colour Bands */
-#band1{
+#band1 {
     top: 70px;
     left: 48px;
 }
 
-#band2{
+#band2 {
     top: 70px;
     left: 125px;
 }
 
-#band3{
+#band3 {
     top: 70px;
     left: 210px;
 }
 
-#band4{
+#band4 {
     top: 70px;
     left: 290px;
 }
 
-#band5{
+#band5 {
     top: 70px;
     left: 390px;
 }
 
-#band6{
+#band6 {
     top: 70px;
     left: 480px;
 }
@@ -85,24 +93,24 @@ select option {
 #band1, #band2, #band3, #band4, #band5, #band6 {
     height: 120px;
     width: 70px;
-    border: none!important;
+    border: none !important;
     padding: 5px !important;
     margin: auto;
     background: none !important;
     border-radius: 0 !important;
     position: absolute;
- /*   opacity: 0;*/
+    /*   opacity: 0;*/
 }
 
-.z1{
+.z1 {
     z-index: 3;
     position: absolute;
 }
 
 /* Resistor Bands Outline */
-#d1, #d2, #d3, #d4, #d5, #d6{
-/*    border-left: 1px solid lightgray;
-    border-right: 1px solid lightgray;*/
+#d1, #d2, #d3, #d4, #d5, #d6 {
+    /*    border-left: 1px solid lightgray;
+        border-right: 1px solid lightgray;*/
     margin-bottom: 5px;
     position: absolute;
 }
@@ -112,27 +120,28 @@ select option {
     transition-timing-function: ease-in-out;
     transition-duration: 0.5s;
 }
-#d1{
+
+#d1 {
     left: 66px;
 }
 
-#d2{
+#d2 {
     left: 150px;
 }
 
-#d3{
+#d3 {
     left: 215px;
 }
 
-#d4{
+#d4 {
     left: 280px;
 }
 
-#d5{
+#d5 {
     left: 410px;
 }
 
-#d6{
+#d6 {
     left: 494px;
 }
 
@@ -149,34 +158,37 @@ select option {
     z-index: 2;
     overflow: hidden;
 }
+
 .d_rect_in {
     top: 59px;
-    width: 9%;/*56px; height: 82px;*/
+    width: 9%; /*56px; height: 82px;*/
     padding-bottom: 22%;
     /*background: transparent;*/
-/*    -moz-border-radius: 25px;
-    -webkit-border-radius: 25px;*/
+    /*    -moz-border-radius: 25px;
+        -webkit-border-radius: 25px;*/
     border-radius: 3px;
     margin-left: 0 !important;
 }
+
 .noborder {
     border-width: 0 !important;
-    border-color: transparent  !important;
+    border-color: transparent !important;
 }
 
 .d_rect, .d_rect_in, .z1 {
     cursor: pointer !important;
 }
 
-.sw, .sw4, .sw5, .sw6{
+.sw, .sw4, .sw5, .sw6 {
     line-height: inherit !important;
 }
 
 /*Results*/
-#dpanel_head{
+#dpanel_head {
     color: lightsalmon;
     font-size: 1rem;
 }
+
 .dpanel, .dpanel2, .dpanel3, .dpanel4 {
     color: skyblue;
 }

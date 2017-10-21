@@ -1,4 +1,9 @@
-colR1 = 1; colR2=2; colR3 = 1; colR4 = 1; colR5 = 1; colR6 = 1;
+colR1 = 1;
+colR2 = 2;
+colR3 = 1;
+colR4 = 1;
+colR5 = 1;
+colR6 = 1;
 
 function bodyLoad() {
     var col1 = ['brown', 'red', 'orange', 'yellow'];
@@ -13,7 +18,7 @@ function bodyLoad() {
         colR1 = 4;
 
     var col2 = ['black', 'red', 'orange', 'violet'];
-    var randCol2= col2[Math.floor(Math.random() * col2.length)];
+    var randCol2 = col2[Math.floor(Math.random() * col2.length)];
     if (randCol2 === 'black')
         colR2 = 1;
     else if (randCol2 === 'red')
@@ -26,7 +31,7 @@ function bodyLoad() {
     colR3 = 0;
 
     var col3 = ['black', 'yellow', 'red', 'green'];
-    var randCol3= col3[Math.floor(Math.random() * col3.length)];
+    var randCol3 = col3[Math.floor(Math.random() * col3.length)];
     if (randCol3 === 'black')
         colR4 = 0;
     else if (randCol3 === 'yellow')
@@ -37,7 +42,7 @@ function bodyLoad() {
         colR4 = 5;
 
     var col4 = ['silver', 'gold', 'yellow', 'grey'];
-    var randCol4= col4[Math.floor(Math.random() * col4.length)];
+    var randCol4 = col4[Math.floor(Math.random() * col4.length)];
     if (randCol4 === 'silver')
         colR5 = 10;
     else if (randCol4 === 'gold')
@@ -48,7 +53,7 @@ function bodyLoad() {
         colR5 = 0.05;
 
     var col5 = ['red', 'brown', 'violet', 'blue'];
-    var randCol5= col5[Math.floor(Math.random() * col5.length)];
+    var randCol5 = col5[Math.floor(Math.random() * col5.length)];
     if (randCol5 === 'red')
         colR6 = 50;
     else if (randCol5 === 'brown')
@@ -65,10 +70,14 @@ function bodyLoad() {
     $('#d5').css('background-color', randCol4);
     $('#d6').css('background-color', randCol5);
 
-   /* var rValues = resistorValue(colR1, colR2, colR3, colR4, colR5, colR6);*/
-    console.log(colR1); console.log(colR2); console.log(colR3);
-    console.log(colR4);console.log(colR5); console.log(colR6);
-   /* console.log(rValues);*/
+    /* var rValues = resistorValue(colR1, colR2, colR3, colR4, colR5, colR6);*/
+    console.log(colR1);
+    console.log(colR2);
+    console.log(colR3);
+    console.log(colR4);
+    console.log(colR5);
+    console.log(colR6);
+    /* console.log(rValues);*/
 }
 
 function bandColour(e, bandiD, rectID) {
@@ -80,8 +89,8 @@ function bandColour(e, bandiD, rectID) {
     console.log($(this).text());
     var col = $(this).text();
 
-/*    $(bandiD).css('background-color', col);
-    $('bandID').css('visibility', 'hidden');*/
+    /*    $(bandiD).css('background-color', col);
+        $('bandID').css('visibility', 'hidden');*/
     $(rectID).css('background-color', col).addClass('noborder');
 }
 
@@ -111,7 +120,7 @@ function displayResistorMetrics(rValues) {
     $('.temp_unit').html(rValues[5]);
 }
 
-$(document).ready(function() {
+$(document).ready(function () {
     $('select').prop('selectedIndex', -1);
     /*var colR = colR1, colR24 = colR2, colR3 = colR3, colR4 = colR4, colR5 = colR5, colR6 = colR6;*/
     var rValues = resistorValue(colR1, colR2, colR3, colR4, colR5, colR6);
@@ -154,7 +163,8 @@ $(document).ready(function() {
         rValues = resistorValue(colR1, colR2, colR3, colR4, colR5);
         //console.log(rValues);
         displayResistorMetrics(rValues);
-    }).promise().done(function () {});
+    }).promise().done(function () {
+    });
 
     $('#bands_6').click(function () {
         $('#bands_6switch').prop('checked', true);
@@ -171,22 +181,22 @@ $(document).ready(function() {
         $('#d6').fadeIn("slow");
 
         rValues = resistorValue(colR1, colR2, colR3, colR4, colR5, colR6);
-       // console.log(rValues);
+        // console.log(rValues);
         displayResistorMetrics(rValues);
     });
 
-    if($('#bands_4').prop('checked')) {
+    if ($('#bands_4').prop('checked')) {
         $('#bands_4switch').prop('checked', true);
         $('#bands_5switch').prop('checked', false);
         $('#bands_6switch').prop('checked', false);
         $('#d3').fadeOut("slow");
         $('#d6').fadeOut("slow");
-    } else if($('#bands_5').prop('checked')) {
+    } else if ($('#bands_5').prop('checked')) {
         $('#bands_5switch').prop('checked', true);
         $('#bands_4switch').prop('checked', false);
         $('#bands_6switch').prop('checked', false);
         $('#d6').fadeOut("slow");
-    } else if($('#bands_6').prop('checked')) {
+    } else if ($('#bands_6').prop('checked')) {
         $('#bands_5switch').prop('checked', false);
         $('#bands_4switch').prop('checked', false);
         $('#bands_6switch').prop('checked', true);
@@ -198,7 +208,7 @@ $(document).ready(function() {
 
 
     // band 1
-    $('#band1').find('a').on('click', function(e) {
+    $('#band1').find('a').on('click', function (e) {
         bandColour.call(this, e, '#band1', '#d1');
         colR1 = $(this).data('value');
         rValues = updateResValuesOnColourChange();
@@ -256,7 +266,7 @@ $(document).ready(function() {
             $("#band2").attr("size", 1).css('opacity', 0);
         });*/
 
-    $('#band2').find('a').on('click', function(e) {
+    $('#band2').find('a').on('click', function (e) {
         bandColour.call(this, e, '#band2', '#d2');
         colR2 = $(this).data('value');
         rValues = updateResValuesOnColourChange();
@@ -265,7 +275,7 @@ $(document).ready(function() {
 
     // band 3
 
-    $('#band3').find('a').on('click', function(e) {
+    $('#band3').find('a').on('click', function (e) {
         bandColour.call(this, e, '#band3', '#d3');
         colR3 = $(this).data('value');
         rValues = updateResValuesOnColourChange();
@@ -273,7 +283,7 @@ $(document).ready(function() {
     });
 
     // band 4
-    $('#band4').find('a').on('click', function(e) {
+    $('#band4').find('a').on('click', function (e) {
         bandColour.call(this, e, '#band4', '#d4');
         colR4 = $(this).data('value');
         rValues = updateResValuesOnColourChange();
@@ -283,7 +293,7 @@ $(document).ready(function() {
 
     // band 5
 
-    $('#band5').find('a').on('click', function(e) {
+    $('#band5').find('a').on('click', function (e) {
         bandColour.call(this, e, '#band5', '#d5');
         colR5 = $(this).data('value');
         rValues = updateResValuesOnColourChange();
@@ -292,7 +302,7 @@ $(document).ready(function() {
 
     // band 6
 
-    $('#band6').find('a').on('click', function(e) {
+    $('#band6').find('a').on('click', function (e) {
         bandColour.call(this, e, '#band6', '#d6');
         colR6 = $(this).data('value');
         rValues = updateResValuesOnColourChange();
@@ -311,23 +321,29 @@ toggle between hiding and showing the dropdown content */
 function toggleDrop6() {
     document.getElementById("band6").classList.toggle("showDrop");
 }
+
 function toggleDrop5() {
     document.getElementById("band5").classList.toggle("showDrop");
 }
+
 function toggleDrop4() {
     document.getElementById("band4").classList.toggle("showDrop");
 }
+
 function toggleDrop3() {
     document.getElementById("band3").classList.toggle("showDrop");
 }
+
 function toggleDrop2() {
     document.getElementById("band2").classList.toggle("showDrop");
 }
+
 function toggleDrop1() {
     document.getElementById("band1").classList.toggle("showDrop");
 }
+
 // Close the dropdown if the user clicks outside of it
-window.onclick = function(e) {
+window.onclick = function (e) {
     if (!$(e.target).hasClass('dropbtn')) {
 
         var myDropdown1 = document.getElementById("band1");
@@ -339,15 +355,15 @@ window.onclick = function(e) {
 
         if (myDropdown1.classList.contains('showDrop')) {
             myDropdown1.classList.remove('showDrop');
-        }else if (myDropdown2.classList.contains('showDrop')) {
+        } else if (myDropdown2.classList.contains('showDrop')) {
             myDropdown2.classList.remove('showDrop');
-        }else if (myDropdown3.classList.contains('showDrop')) {
+        } else if (myDropdown3.classList.contains('showDrop')) {
             myDropdown3.classList.remove('showDrop');
-        }else if (myDropdown4.classList.contains('showDrop')) {
+        } else if (myDropdown4.classList.contains('showDrop')) {
             myDropdown4.classList.remove('showDrop');
-        }else if (myDropdown5.classList.contains('showDrop')) {
+        } else if (myDropdown5.classList.contains('showDrop')) {
             myDropdown5.classList.remove('showDrop');
-        }else if (myDropdown6.classList.contains('showDrop')) {
+        } else if (myDropdown6.classList.contains('showDrop')) {
             myDropdown6.classList.remove('showDrop');
         }
     }

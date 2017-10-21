@@ -3,19 +3,19 @@
 }
 
 .dropdown .dropbtn {
-/*    color: white;
-    background-color: inherit;*/
+    /*    color: white;
+        background-color: inherit;*/
 }
 
 .dropdown:hover {
-/*    background-color: rgba(251, 255, 219, 0.2);*/
+    /*    background-color: rgba(251, 255, 219, 0.2);*/
 }
 
 .drop-content, .drop-content6, .drop-content5, .drop-content4, .drop-content3,
 .drop-content2, .drop-content1 {
     display: none;
     min-width: 75px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 3;
     overflow: auto;
     overflow-y: scroll;
