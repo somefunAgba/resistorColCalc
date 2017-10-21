@@ -1,0 +1,77 @@
+
+.res_rect {
+    float: right;
+    shape-outside:  polygon(0 50%, 3% 0, 18% 0, 25% 5%, 75% 5%, 82% 0, 97% 0, 100% 50%,
+    97% 100%, 82% 100%, 75% 95%, 25% 95%, 18% 100%, 3% 100%, 0 50%);
+    clip-path: polygon(0 50%, 3% 0, 18% 0, 25% 5%, 75% 5%, 82% 0, 97% 0, 100% 50%,
+    97% 100%, 82% 100%, 75% 95%, 25% 95%, 18% 100%, 3% 100%, 0 50%);
+    height: 150px;
+    width: 600px;
+    shape-margin: 0px;
+    background-color: #ffcc66;
+    border-radius: 45%/180%;
+    box-shadow: 0px 0px 1px 1px #b3b7b94d;
+
+    z-index: 1;
+    margin-bottom: 10%;
+}
+/*
+(5% 0, 20% 0, 30% 5%, 70% 5%, 80% 0, 95% 0, 100% 50%,
+95% 100%, 80% 100%, 70% 95%, 30% 95%, 20% 100%, 5% 100%, 0 50%);*/
+
+/* Wire Lines*/
+
+.left-wire {
+    width: 50px; height: 2px;
+    background: skyblue;
+    margin: 25px !important;
+    position: relative;
+    bottom: -102px;
+    left: -60px;
+}
+
+.left-wire::before {
+    position: absolute;
+    left:0;
+    width: 10px; height: 10px;
+    border-radius: 5px;
+    top: -4px;
+    background: lightsalmon;
+    right:auto;
+}
+
+.right-wire {
+    width: 100px; height: 2px;
+    background: skyblue;
+    margin: 25px !important;
+    position: absolute;
+    top: 108px;
+    right: -45px;
+    clear: both;
+}
+
+.right-wire::before {
+    position: absolute;
+    right:0;
+    width: 10px; height: 10px;
+    border-radius: 5px;
+    top: -4px;
+    background: lightsalmon;
+    left:auto;
+}
+
+#result{
+    font-weight: bolder;
+    padding-bottom: 2%;
+}
+
+.m_dashboard:hover{
+    background: lightgrey;
+    border-bottom: 5px solid #87ceeb;
+    width: 21%;
+}
+#result:hover{
+    background: lightgrey;
+    border-bottom: 5px solid #ec407a;
+    width: auto;
+}

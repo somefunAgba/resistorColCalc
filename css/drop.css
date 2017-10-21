@@ -1,0 +1,42 @@
+.dropdown {
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+/*    color: white;
+    background-color: inherit;*/
+}
+
+.dropdown:hover {
+/*    background-color: rgba(251, 255, 219, 0.2);*/
+}
+
+.drop-content, .drop-content6, .drop-content5, .drop-content4, .drop-content3,
+.drop-content2, .drop-content1 {
+    display: none;
+    min-width: 75px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 3;
+    overflow: auto;
+    overflow-y: scroll;
+}
+
+.drop-content a, .drop-content6 a, .drop-content5 a, .drop-content4 a, .drop-content3 a,
+.drop-content2 a, .drop-content1 a {
+    padding: 6px 6px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    color: #efece8;
+}
+
+.drop-content a:hover, .drop-content6, .drop-content5, .drop-content4, .drop-content3,
+.drop-content2, .drop-content1 a:hover {
+    background-color: #ddd;
+}
+
+.showDrop {
+    display: block;
+}
+
+
