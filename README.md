@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/107824624.svg)](https://zenodo.org/badge/latestdoi/107824624)
+
 Colour-Coded Resistance Calculation
 
 _**See => https://somefunagba.github.io/resistorColCalc/**_
